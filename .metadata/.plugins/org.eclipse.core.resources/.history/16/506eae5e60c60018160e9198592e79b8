@@ -1,0 +1,7 @@
+package arrayUtils;
+
+public class ArrayUtils {
+	public static void printArray(double[]array) {
+		System.out.println("Printing array");
+	}
+}

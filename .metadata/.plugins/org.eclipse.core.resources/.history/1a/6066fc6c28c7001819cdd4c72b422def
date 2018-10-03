@@ -1,0 +1,24 @@
+/*******************************************************************************
+ * /*******************************************************
+ *  * Copyright (C) 2018-2019 Retopall Systems ¡
+ *  * 
+ *  * This file is part of RetopMath distributed by Retopall.
+ *  * 
+ *  * The library RetopMath can not be copied and/or distributed without the express
+ *  * permission of Retopall
+ *  * For more information please check www.retopall.com or send an email to retopall-contact@retopall.com
+ *  *******************************************************/
+ ******************************************************************************/
+package utils.vector;
+
+public class VectorException extends Exception{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public VectorException(String error,String ref) {
+		System.err.println("Vector error in reference "+ref);
+		System.out.println("Error: "+error);
+	}
+}

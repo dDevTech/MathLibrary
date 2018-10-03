@@ -1,0 +1,7 @@
+package drawable;
+
+public class Segment {
+	public Segment() {
+		
+	}
+}

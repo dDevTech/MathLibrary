@@ -1,0 +1,12 @@
+1538403489731	Move compilation unit
+1538403499848	Move compilation unit
+1538403526527	Delete element
+1538425479962	Rename package 'Vector'
+1538425485814	Copy compilation unit
+1538425494882	Rename type 'MatrixException'
+1538495833586	Delete element
+1538497784250	Delete element
+1538499427757	Rename type 'FunctionViewer'
+1538501106011	Move compilation unit
+1538502241449	Encapsulate field 'defaultYAxis'
+1538502247077	Encapsulate field 'defaultXAxis'

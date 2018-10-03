@@ -1,0 +1,22 @@
+package test;
+
+
+import draw.MathViewer;
+import stadistic.Dataset;
+import stadistic.Regression;
+import utils.matrix.Matrix;
+import utils.vector.Vector;
+
+public class Main {
+
+	public static void main(String[] args) {
+		double[][]values= {{1,1,1,-1},{1,1,-1,1},{1,-1,1,1},{-1,1,1,1}};
+		double []outputsX= {49,69,89,99,109,20,20};
+		double []outputsY= {124,95,71,45,18,30,30};
+
+		Vector vector = new Vector(outputsX);
+		vector.convertToMatrix().multiply(new Matrix(values)).printMatrix();;
+		vector.printVector();
+	}
+
+}

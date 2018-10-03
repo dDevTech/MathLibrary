@@ -1,0 +1,21 @@
+package drawable;
+
+import java.awt.Graphics;
+
+import draw.Drawable;
+
+public class Function implements Drawable {
+	private double polynomial;
+
+	public Function(double polynomial) {
+		this.polynomial = polynomial;
+		
+	}
+
+	@Override
+	public void render(Graphics g) {
+		
+		
+	}
+	
+}

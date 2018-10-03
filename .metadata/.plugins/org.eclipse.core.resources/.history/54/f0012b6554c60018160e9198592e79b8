@@ -1,0 +1,18 @@
+package stadistic;
+
+import java.util.ArrayList;
+
+import utils.matrix.Matrix;
+
+public class Dataset {
+	ArrayList<Data>dataset = new ArrayList<>();
+	public Dataset(double[][][]points) {
+		for(int i=0;i<points.length;i++) {
+			for(int j=0;j<points.length;j++) {
+				
+			}
+		}
+		
+	}
+	
+}

@@ -1,0 +1,13 @@
+//		Matrix matrix = new Matrix(values);
+//		
+//		
+//		matrix.printMatrix();
+//		
+//		matrix.getInverseMatrix().printMatrix();
+	
+		
+		double[]values4=Regression.executePolynomialRegression(outputsX, outputsY, 5);
+		Regression.printRegression(values4,5);
+		MathViewer viewer= new MathViewer(600, 600);
+		viewer.draw().addDataset(Dataset.arrayToDataset(outputsX, outputsY));
+		viewer.draw().addFunction(values4);

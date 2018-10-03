@@ -1,0 +1,7 @@
+package stadistic;
+
+public class Stadistic {
+	public static void getMedian(DataSet data) {
+		
+	}
+}

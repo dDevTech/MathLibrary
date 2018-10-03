@@ -1,0 +1,22 @@
+package draw;
+
+import javax.swing.JFrame;
+
+public class FunctionViewer extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Canvas canvas;
+	public FunctionViewer(int width,int height) {
+		this.setTitle("Function Viewer Retopall");
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLocationRelativeTo(null);
+		this.setSize(width, height);
+		this.setResizable(false);
+		canvas= new Canvas();
+		this.setContentPane(canvas);
+		this.setVisible(true);
+	}
+	
+}

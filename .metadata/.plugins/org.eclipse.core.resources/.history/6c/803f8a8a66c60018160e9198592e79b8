@@ -1,0 +1,15 @@
+package drawable;
+
+import java.awt.Graphics;
+
+import draw.Drawable;
+
+public class GraphicalPoint extends Point implements Drawable{
+
+	@Override
+	public void render(Graphics g) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

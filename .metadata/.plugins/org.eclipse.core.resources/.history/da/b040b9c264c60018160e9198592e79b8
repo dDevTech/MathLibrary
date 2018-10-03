@@ -1,0 +1,8 @@
+package draw;
+
+public class CoordinateAxis {
+	private static int MARGIN=50;
+	public CoordinateAxis() {
+		
+	}
+}

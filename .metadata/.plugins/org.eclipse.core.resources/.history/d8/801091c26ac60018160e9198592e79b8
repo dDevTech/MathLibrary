@@ -1,0 +1,42 @@
+package draw;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class CoordinateAxis implements Drawable{
+	public static int MARGIN=50;
+	private int XAxisReal;
+	private int YAxisReal;
+	private int defaultXAxis;
+	private int defaultYAxis;
+	public CoordinateAxis() {
+		defaultXAxis=MathViewerConstants.WIDTH_SCREEN-MARGIN-2*MARGIN;
+		setDefaultYAxis(MathViewerConstants.HEIGHT_SCREEN-MARGIN-2*MARGIN);
+		XAxisReal=MathViewerConstants.WIDTH_SCREEN-MARGIN-2*MARGIN;
+		YAxisReal=MathViewerConstants.HEIGHT_SCREEN-MARGIN-2*MARGIN;
+	}
+	public void render(Graphics g) {
+		g.setColor(Color.black);
+		g.drawLine(MARGIN, MathViewerConstants.HEIGHT_SCREEN-MARGIN, MathViewerConstants.WIDTH_SCREEN-MARGIN, MathViewerConstants.HEIGHT_SCREEN-MARGIN);
+		g.drawLine(MARGIN, MathViewerConstants.HEIGHT_SCREEN-MARGIN, MARGIN, MARGIN);
+	}
+	public int getXAxis() {
+		return XAxisReal;
+	}
+	public void setXAxis(int xAxis) {
+		XAxisReal = xAxis;
+	}
+	public int getYAxis() {
+		return YAxisReal;
+	}
+	public void setYAxis(int yAxis) {
+		this.YAxisReal = yAxis;
+	}
+	public int getDefaultYAxis() {
+		return defaultYAxis;
+	}
+	public void setDefaultYAxis(int defaultYAxis) {
+		this.defaultYAxis = defaultYAxis;
+	}
+	
+}

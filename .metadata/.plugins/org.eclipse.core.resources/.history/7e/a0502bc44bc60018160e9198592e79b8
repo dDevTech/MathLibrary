@@ -1,0 +1,5 @@
+package space;
+
+public class PhysicsCollider {
+
+}

@@ -1,0 +1,11 @@
+package space;
+
+public class Point {
+	public Point(double x, double y) {
+
+	}
+
+	public Point(double x, double y,double z ) {
+
+	}
+}

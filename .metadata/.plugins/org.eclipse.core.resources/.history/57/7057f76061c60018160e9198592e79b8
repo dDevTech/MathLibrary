@@ -1,0 +1,8 @@
+package general;
+
+public class MathUtils {
+	public static double roundDecimals(int n,double number) {
+		int m=n*10;
+		return ((int)(number*m)/m);
+	}
+}

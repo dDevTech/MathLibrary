@@ -1,0 +1,36 @@
+package draw;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.JPanel;
+
+public class Canvas extends JPanel{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Thread render;
+	private Graphics g;
+	private CoordinateAxis axis;
+	public Canvas() {
+		this.setBackground(Color.white);
+		render= new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				render(g);
+				
+			}
+		});
+	}
+	public void paint(Graphics g) {
+		super.paint(g);
+		this.g=g;
+		render.run();
+		repaint();
+	}
+	public void render(Graphics g) {
+		
+	}
+}

@@ -1,0 +1,42 @@
+package drawable;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+import draw.CoordinateAxis;
+import draw.Drawable;
+import draw.MathViewerConstants;
+
+public class Function implements Drawable {
+	private double[] polynomial;
+	private CoordinateAxis axis;
+
+	public Function(double[] polynomial,CoordinateAxis axis) {
+		this.polynomial = polynomial;
+		this.axis = axis;
+		
+	}
+
+	@Override
+	public void render(Graphics g) {
+		g.setColor(Color.black);
+		
+	
+		for(int i=0;i<axis.getDefaultXAxis();i++) {
+			int fx=0;
+			for(int j=polynomial.length-1;j>=0;j--) {
+				if(j==0) {
+					fx+=polynomial[j];
+				}else {
+					fx+=Math.pow(polynomial[j], j);
+				}
+			
+			}
+			
+			g.drawRect(axis.MARGIN+i, MathViewerConstants.HEIGHT_SCREEN-axis.MARGIN-  fx, 2, 2);
+		}
+		
+		
+	}
+	
+}

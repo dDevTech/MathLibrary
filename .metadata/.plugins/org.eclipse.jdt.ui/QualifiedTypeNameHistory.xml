@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="utils.vector.VectorException"/>
+<fullyQualifiedTypeName name="space.PhysicsCollider"/>
+<fullyQualifiedTypeName name="space.Physics2DCollider"/>
+<fullyQualifiedTypeName name="stadistic.Regression"/>
+<fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+<fullyQualifiedTypeName name="arrayUtils.ArrayUtils"/>
+<fullyQualifiedTypeName name="general.MathUtils"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="draw.Function"/>
+<fullyQualifiedTypeName name="draw.Canvas"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="draw.FunctionViewer"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicBorders.MarginBorder"/>
+<fullyQualifiedTypeName name="stadistic.Data"/>
+<fullyQualifiedTypeName name="space.Point"/>
+<fullyQualifiedTypeName name="drawable.GraphicalPoint"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="draw.Drawable"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="drawable.Function"/>
+<fullyQualifiedTypeName name="javax.swing.text.StyleConstants.ColorConstants"/>
+<fullyQualifiedTypeName name="draw.MathViewerConstants"/>
+<fullyQualifiedTypeName name="draw.CoordinateAxis"/>
+<fullyQualifiedTypeName name="java.awt.BasicStroke"/>
+<fullyQualifiedTypeName name="java.awt.Graphics2D"/>
+<fullyQualifiedTypeName name="java.awt.Graphics"/>
+<fullyQualifiedTypeName name="utils.vector.Vector"/>
+<fullyQualifiedTypeName name="draw.MathViewer"/>
+<fullyQualifiedTypeName name="stadistic.Dataset"/>
+<fullyQualifiedTypeName name="stadistic.Stadistic"/>
+<fullyQualifiedTypeName name="utils.matrix.Matrix"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="utils.equations.EquationData"/>
+<fullyQualifiedTypeName name="utils.equations.Solver"/>
+</qualifiedTypeNameHistroy>

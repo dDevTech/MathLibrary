@@ -1,0 +1,5 @@
+package space;
+
+public class Entity2D extends Physics2DCollider{
+
+}

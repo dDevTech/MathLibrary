@@ -1,0 +1,9 @@
+package stadistic;
+
+import utils.matrix.Matrix;
+
+public class Dataset {
+	public Dataset(Matrix values) {
+		
+	}
+}

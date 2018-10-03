@@ -1,0 +1,26 @@
+/*******************************************************************************
+ * /*******************************************************
+ *  * Copyright (C) 2018-2019 Retopall Systems ¡
+ *  * 
+ *  * This file is part of RetopMath distributed by Retopall.
+ *  * 
+ *  * The library RetopMath can not be copied and/or distributed without the express
+ *  * permission of Retopall
+ *  * For more information please check www.retopall.com or send an email to retopall-contact@retopall.com
+ *  *******************************************************/
+ ******************************************************************************/
+package space;
+
+public abstract class Entity2D extends Physics2DCollider{
+
+	public Entity2D(double x, double y, int width, int height) {
+		super(x, y, width, height);
+	}
+	
+	public void render() {
+		
+	}
+	public void setup() {
+		
+	}
+}

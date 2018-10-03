@@ -1,0 +1,58 @@
+package draw;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.util.ArrayList;
+
+import javax.swing.JPanel;
+import drawable.GraphicalPoint;
+
+
+public class Canvas extends JPanel{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Thread render;
+	private Graphics g;
+	private CoordinateAxis axis;
+	private ArrayList<GraphicalPoint>points = new ArrayList<>();
+	public Canvas() {
+		this.setBackground(Color.white);
+		render= new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				render(g);
+				
+			}
+		});
+		setup();
+	}
+	public void setup() {
+		axis= new CoordinateAxis();
+	}
+	public void paint(Graphics g) {
+		super.paint(g);
+		this.g=g;
+		render.run();
+		repaint();
+	}
+	public void render(Graphics g) {
+		axis.render(g);
+		for(GraphicalPoint point:points) {
+			point.render(g);
+		}
+	}
+
+	public void addDataset()
+	public void addPoint(double x,double y) {
+		points.add(new GraphicalPoint(x+CoordinateAxis.MARGIN,MathViewerConstants.HEIGHT_SCREEN- y-CoordinateAxis.MARGIN));
+	}
+	public void removePoint(GraphicalPoint p) {
+		points.remove(p);
+	}
+	public void clearCanvas() {
+		points.clear();
+	}
+}

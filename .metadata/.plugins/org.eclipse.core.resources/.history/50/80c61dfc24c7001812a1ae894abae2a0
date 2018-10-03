@@ -1,0 +1,26 @@
+package utils.equations;
+
+import java.util.ArrayList;
+
+public class EquationData{
+	private double[] coefficients;
+	private int incognites=0;
+	public EquationData(double[]coefficients) {
+		this.coefficients = coefficients;
+		this.incognites=coefficients.length-1;
+		
+	}
+	public double[] getCoefficients() {
+		return coefficients;
+	}
+	public void setCoefficients(double[] coefficients) {
+		this.coefficients = coefficients;
+	}
+	public int getIncognites() {
+		return incognites;
+	}
+	public void setIncognites(int incognites) {
+		this.incognites = incognites;
+	}
+	
+}

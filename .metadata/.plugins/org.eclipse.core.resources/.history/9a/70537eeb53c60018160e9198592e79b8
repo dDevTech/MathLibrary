@@ -1,0 +1,7 @@
+package stadistic;
+
+public class Dataset {
+	public Dataset(int id) {
+		
+	}
+}

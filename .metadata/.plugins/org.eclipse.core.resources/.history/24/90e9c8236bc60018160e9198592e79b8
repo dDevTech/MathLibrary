@@ -1,0 +1,26 @@
+package drawable;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+import draw.CoordinateAxis;
+import draw.Drawable;
+import space.Point;
+
+public class GraphicalPoint extends Point implements Drawable{
+
+	private int SIZE=7;
+	private CoordinateAxis axis;
+	public GraphicalPoint(double x, double y,CoordinateAxis axis) {
+		super(x, y);
+		this.axis = axis;
+	}
+
+	@Override
+	public void render(Graphics g) {
+		g.setColor(Color.black);
+		g.fillOval((int)(getX()-SIZE/2), (int)(getY()-SIZE/2), SIZE, SIZE);
+		
+	}
+	
+}

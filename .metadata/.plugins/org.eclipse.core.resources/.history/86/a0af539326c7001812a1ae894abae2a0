@@ -1,0 +1,24 @@
+package utils.equations;
+
+import java.util.ArrayList;
+
+import utils.matrix.Matrix;
+
+public class Solver {
+		public static void solver(ArrayList<EquationData>equations) {
+			//A-1*B
+			double [][]coefficients= new double[equations.size()][equations.get(0).getIncognites()];
+			double [][]constants =new double [equations.size()][1];
+			for(int i=0;i<equations.size();i++) {
+				for(int j=0;j<equations.get(i).getIncognites()-2;j++) {
+					coefficients[i][j]=equations.get(i).getCoefficients()[j];
+				}
+				constants[i][0]=equations.get(i).getCoefficients()[equations.get(0).getIncognites()-1];
+			}
+			Matrix matrix = new Matrix(coefficients);
+			Matrix matrix2 = new Matrix(constants);
+			matrix.getInverseMatrix().multiply(matrix2).printMatrix();
+		
+		}
+
+}
