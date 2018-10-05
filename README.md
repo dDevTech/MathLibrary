@@ -18,3 +18,4 @@ double solutions[]=Regression.executePolynomialRegression(outputsX, outputsY, 4)
 viewer.draw().addDataset(Dataset.arrayToDataset(outputsX, outputsY)); //Simple draw dataset points
 viewer.draw().addFunction(solutions); //Draw the regression solution function
 ```
+![imagen1](https://user-images.githubusercontent.com/18512841/46537073-aa31f480-c8b0-11e8-92f5-e17c42e654e4.png)
