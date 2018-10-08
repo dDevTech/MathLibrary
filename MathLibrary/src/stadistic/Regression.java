@@ -102,7 +102,31 @@ public class Regression {
 		System.out.println();
 		System.out.println("--------------");
 	}
+	public static String getStringFunction(double[] regressionValues,int precision) {
+		String equation="";
+		equation+="f(x)= ";
+		for (int i = regressionValues.length - 1; i >= 0; i--) {
+			if (regressionValues[i] > 0) {
+				if (i == 0) {
+					equation+=(MathUtils.roundDecimals(precision, regressionValues[i]));
+				} else if (i == regressionValues.length - 1) {
+					equation+=(MathUtils.roundDecimals(precision, regressionValues[i]) + "x" + i + " + ");
+				} else {
+					equation+=(MathUtils.roundDecimals(precision, regressionValues[i]) + "x" + i + " + ");
+				}
+			} else if (regressionValues[i] < 0) {
+				if (i == 0) {
+					equation+=(MathUtils.roundDecimals(precision, Math.abs(regressionValues[i])));
+				} else if (i == regressionValues.length - 1) {
+					equation+=(MathUtils.roundDecimals(precision, Math.abs(regressionValues[i])) + "x" + i + " - ");
+				} else {
+					equation+=(MathUtils.roundDecimals(precision, Math.abs(regressionValues[i])) + "x" + i + " - ");
+				}
+			}
 
+		}
+		return equation;
+	}
 	public static Matrix[] convertDatasetToMatrixLinearRegression(Dataset dataset) {
 		ArrayList<Data> data = dataset.getDataset();
 		Matrix[] matrixXY = new Matrix[2];

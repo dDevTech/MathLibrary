@@ -1,7 +1,0 @@
-package draw;
-
-public class CoordinateAxis {
-	public CoordinateAxis() {
-		
-	}
-}

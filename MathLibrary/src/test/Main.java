@@ -10,6 +10,8 @@ package test;
 import java.util.ArrayList;
 
 import draw.MathViewer;
+import draw.MathViewerConstants;
+import loader.CSVLoader;
 import stadistic.Dataset;
 import stadistic.Regression;
 import stadistic.Stadistic;
@@ -22,8 +24,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		double[][]values= {{1,1,1,-1},{1,1,-1,1},{1,-1,1,1},{-1,1,1,1}};
-		double []outputsX= {49,69,89,99,109,20};
-		double []outputsY= {124,95,36,45,55,30};
+		double []outputsX= {49,69,89,99,109,20,30,10};
+		double []outputsY= {124,95,36,45,55,30,20,20};
 //		double []outputsY1= {124,45,71,45,18,30};
 //		double []outputsY2= {16,95,71,45,18,30};
 //		ArrayList<EquationData>data = new ArrayList<>();
@@ -33,11 +35,14 @@ public class Main {
 //			data.add(new EquationData(outputsY2));
 //			data.add(new EquationData(outputsY2));
 //		Solver.solver(data);
-		MathViewer viewer= new MathViewer(600, 600);
-	
-		double solutions[]=Regression.executePolynomialRegression(outputsX, outputsY, 4);
-		viewer.draw().addDataset(Dataset.arrayToDataset(outputsX, outputsY));
+		MathViewer viewer= new MathViewer(1980,1080);
+		Dataset d=CSVLoader.loadData("x", "y", "aleatorio.csv");
+		double solutions[]=Regression.executePolynomialRegression(d, 5);
+		Regression.printRegression(solutions, 2);
+		viewer.draw().addDataset(d);
+		MathViewerConstants.SHOWTEXT=false;
 		viewer.draw().addFunction(solutions);
+		
 	}
 
 }

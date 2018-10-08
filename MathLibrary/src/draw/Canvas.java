@@ -8,6 +8,7 @@
 package draw;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.util.ArrayList;
 
@@ -30,6 +31,7 @@ public class Canvas extends JPanel {
 	private ArrayList<Function> functions = new ArrayList<>();
 	public Canvas() {
 		this.setBackground(Color.white);
+		
 		render = new Thread(new Runnable() {
 
 			@Override
@@ -38,7 +40,7 @@ public class Canvas extends JPanel {
 
 			}
 		});
-		setup();
+		
 	}
 
 	public void setup() {
@@ -53,6 +55,7 @@ public class Canvas extends JPanel {
 	}
 
 	public void render(Graphics g) {
+		g.setFont(new Font("Noto Sans", Font.BOLD, 16));
 		axis.render(g);
 		for (GraphicalPoint point : points) {
 			point.render(g);
@@ -76,13 +79,11 @@ public class Canvas extends JPanel {
 			maxX = (int) Math.max(data.get(i).getX(), maxX);
 			maxY = (int) Math.max(data.get(i).getY(), maxY);
 		}
+		if(MathViewerConstants.AUTOMATIC) {
+		axis.setYAxis(maxY);
+		axis.setXAxis(maxX);
+		}
 	
-		if(maxX>axis.getXAxis()) {
-			axis.setXAxis(maxX);
-		}
-		if(maxY>axis.getYAxis()) {
-			axis.setYAxis(maxY);
-		}
 		for(int i=0;i<data.size();i++) {
 			points.add(new GraphicalPoint(dataset.get(i).getX(),dataset.get(i).getY(),axis));
 		}

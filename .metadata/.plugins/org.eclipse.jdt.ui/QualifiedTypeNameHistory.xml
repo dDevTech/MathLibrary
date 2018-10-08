@@ -3,7 +3,6 @@
 <fullyQualifiedTypeName name="utils.vector.VectorException"/>
 <fullyQualifiedTypeName name="space.PhysicsCollider"/>
 <fullyQualifiedTypeName name="space.Physics2DCollider"/>
-<fullyQualifiedTypeName name="stadistic.Regression"/>
 <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
 <fullyQualifiedTypeName name="arrayUtils.ArrayUtils"/>
 <fullyQualifiedTypeName name="general.MathUtils"/>
@@ -24,17 +23,24 @@
 <fullyQualifiedTypeName name="java.awt.Color"/>
 <fullyQualifiedTypeName name="drawable.Function"/>
 <fullyQualifiedTypeName name="javax.swing.text.StyleConstants.ColorConstants"/>
-<fullyQualifiedTypeName name="draw.MathViewerConstants"/>
-<fullyQualifiedTypeName name="draw.CoordinateAxis"/>
-<fullyQualifiedTypeName name="java.awt.BasicStroke"/>
 <fullyQualifiedTypeName name="java.awt.Graphics2D"/>
 <fullyQualifiedTypeName name="java.awt.Graphics"/>
 <fullyQualifiedTypeName name="utils.vector.Vector"/>
 <fullyQualifiedTypeName name="draw.MathViewer"/>
-<fullyQualifiedTypeName name="stadistic.Dataset"/>
 <fullyQualifiedTypeName name="stadistic.Stadistic"/>
 <fullyQualifiedTypeName name="utils.matrix.Matrix"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="utils.equations.EquationData"/>
 <fullyQualifiedTypeName name="utils.equations.Solver"/>
+<fullyQualifiedTypeName name="java.awt.Font"/>
+<fullyQualifiedTypeName name="java.awt.BasicStroke"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="loader.CSVLoader"/>
+<fullyQualifiedTypeName name="stadistic.Dataset"/>
+<fullyQualifiedTypeName name="draw.CoordinateAxis"/>
+<fullyQualifiedTypeName name="draw.MathViewerConstants"/>
+<fullyQualifiedTypeName name="stadistic.Regression"/>
 </qualifiedTypeNameHistroy>

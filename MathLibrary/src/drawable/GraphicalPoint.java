@@ -7,8 +7,10 @@
 
 package drawable;
 
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 
 import draw.CoordinateAxis;
 import draw.Drawable;
@@ -26,9 +28,19 @@ public class GraphicalPoint extends Point implements Drawable{
 
 	@Override
 	public void render(Graphics g) {
-		g.setColor(Color.black);
-	
-		g.fillOval((int)(CoordinateAxis.MARGIN+(getX()-SIZE/2)*axis.getDefaultXAxis()/(double)axis.getXAxis()), MathViewerConstants.HEIGHT_SCREEN- (int)((getY()-SIZE/2)*axis.getDefaultYAxis()/(double)axis.getYAxis())-CoordinateAxis.MARGIN, SIZE, SIZE);
+		g.setColor(new Color(0,0,0,100));
+		Graphics2D g2 = (Graphics2D) g;
+		g2.setStroke(new BasicStroke(1f));
+		int x=(int) (CoordinateAxis.MARGIN+MathViewerConstants.MAXIMUM*(getX())*axis.getDefaultXAxis()/(double)axis.getXAxis()-SIZE/2);
+		int y=(int)(MathViewerConstants.HEIGHT_SCREEN -CoordinateAxis.MARGIN-SIZE/2-getY()*axis.getDefaultYAxis()/axis.getYAxis());
+		
+		g.fillOval(x,y , SIZE, SIZE);
+		if(MathViewerConstants.SHOWTEXT) {
+		g.drawString(getX()+" , "+getY(), x, y);
+		}
+		g.setColor(new Color(0,0,0,16));
+		g.drawLine(x+SIZE/2, y+SIZE/2, CoordinateAxis.MARGIN, y+SIZE/2);
+		g.drawLine(x+SIZE/2, y+SIZE/2, x+SIZE/2, MathViewerConstants.HEIGHT_SCREEN-CoordinateAxis.MARGIN);
 		
 	}
 	
