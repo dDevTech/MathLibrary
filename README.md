@@ -23,4 +23,4 @@ viewer.draw().addDataset(Dataset.arrayToDataset(outputsX, outputsY)); //Simple d
 viewer.draw().addFunction(solutions); //Draw the regression solution function
 ```
 Output
-![imagen1](https://user-images.githubusercontent.com/18512841/46537073-aa31f480-c8b0-11e8-92f5-e17c42e654e4.png)
+![screenshot 83](https://user-images.githubusercontent.com/18512841/46673748-c5677180-cbda-11e8-831f-ebee06776cbd.png)
