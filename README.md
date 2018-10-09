@@ -1,3 +1,4 @@
+A Java Math Library for carryng out complex functions and advanced tools. From math geometry, calculus and algebra to artificial intelligence
 # Features
 * Cross platform
 * Simple and easy use
@@ -12,12 +13,20 @@
 * 2D/3D Physics
 * Collisions
 * CSV data reader
-# MathLibrary
-This library let you to carry out complex algorithms\
-Works in every platform : Linux, Windows, MacOSX
+* Artificial Inteligence - Beta
+* Neural Network - In progress
+* Genetic Algorithm - In progress
+## Download
+Download the .jar file and set it to your project workspace.
+Select project properties and add the library to the build path.
+Then you will have finished setting up all the requirements
 ## IDE Environment
 Used Eclipse.
 You can also use Netbeans or IntellijIDEA
+# Coding with the Math Library
+This library let you to carry out complex algorithms\
+Works in every platform : Linux, Windows, MacOSX
+
 ## Sintax
 The sintax for using the library is Simple.
 You have Matrix, Vector classes for creating math structures\
