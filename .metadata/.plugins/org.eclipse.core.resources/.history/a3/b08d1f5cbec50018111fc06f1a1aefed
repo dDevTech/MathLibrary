@@ -1,8 +1,0 @@
-package utils.matrix;
-
-public class MatrixException extends Exception{
-	public MatrixException(String error,String ref) {
-		System.err.println("Matrix error in reference "+ref);
-		System.out.println("Error: "+error);
-	}
-}
