@@ -1,6 +1,6 @@
 # MathLibrary
 This library let you to carry out complex algorithms\
-Works in every platform : Linux, Windows, MacOSX\
+Works in every platform : Linux, Windows, MacOSX
 ## IDE Environment
 Used Eclipse.
 You can also use Netbeans or IntellijIDEA
