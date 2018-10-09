@@ -1,8 +1,0 @@
-package utils.vector;
-
-public class VectorException extends Exception{
-	public VectorException(String error,String ref) {
-		System.err.println("Matrix error in reference "+ref);
-		System.out.println("Error: "+error);
-	}
-}

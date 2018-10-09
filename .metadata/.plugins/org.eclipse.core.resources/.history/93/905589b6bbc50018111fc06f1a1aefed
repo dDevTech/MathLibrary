@@ -1,7 +1,0 @@
-package utils.functions;
-
-public class Functions {
-	public static void sigmoidFunction() {
-		
-	}
-}
