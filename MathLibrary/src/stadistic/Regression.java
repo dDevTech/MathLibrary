@@ -7,6 +7,7 @@ import general.MathUtils;
 import utils.matrix.Matrix;
 
 public class Regression {
+	public static String[]funcLetters= {"f","g","h","a","b","c","m","n","o","p","q","t","v"};
 	public static double[] executeLinearRegression(Dataset dataset) {
 
 		Matrix[] matrixXY = convertDatasetToMatrixLinearRegression(dataset);
@@ -102,9 +103,9 @@ public class Regression {
 		System.out.println();
 		System.out.println("--------------");
 	}
-	public static String getStringFunction(double[] regressionValues,int precision) {
+	public static String getStringFunction(double[] regressionValues,int precision,int id) {
 		String equation="";
-		equation+="f(x)= ";
+		equation+=funcLetters[id]+"(x)= ";
 		for (int i = regressionValues.length - 1; i >= 0; i--) {
 			if (regressionValues[i] > 0) {
 				if (i == 0) {
@@ -155,6 +156,8 @@ public class Regression {
 			}
 			mY.setValue(data.indexOf(d), 0, d.getY());
 		}
+		mX.printMatrix();
+		mY.printMatrix();
 		matrixXY[0] = mX;
 		matrixXY[1] = mY;
 		return matrixXY;

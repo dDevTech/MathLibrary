@@ -1,7 +1,0 @@
-package general;
-
-public class MathUtils {
-	public static void roundDecimals(int n,double number) {
-		
-	}
-}

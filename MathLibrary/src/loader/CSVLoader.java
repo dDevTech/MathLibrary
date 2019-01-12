@@ -53,6 +53,7 @@ public class CSVLoader {
 					counter++;
 					//System.out.println(line);
 				}
+				br.close();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -106,6 +107,7 @@ public class CSVLoader {
 					}
 					//System.out.println(line);
 				}
+				br.close();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

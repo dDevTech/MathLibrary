@@ -1,6 +1,0 @@
-package draw;
-
-public class MathViewerConstants {
-	protected static int WIDTH_SCREEN=600;
-	protected static int HEIGHT_SCREEN=800;
-}

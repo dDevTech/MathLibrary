@@ -1,7 +1,0 @@
-package draw;
-
-import javax.swing.JFrame;
-
-public class FunctionViewer extends JFrame {
-	
-}

@@ -10,10 +10,106 @@
       <link>http://www.eclipse.org</link>
     </image>
     <item>
+      <title><![CDATA[Eclipse Development Process 2018]]></title>
+      <link><![CDATA[https://blogs.eclipse.org/post/wayne-beaton/eclipse-development-process-2018]]></link>
+      <description><![CDATA[In December 7/2018, the Eclipse Foundation's Board of Directors approved a new edition of the Eclipse Development Process (EDP) which introduces one particularly significant change, along with a small number of other useful changes.]]></description>
+      <pubDate>Wed, 19 Dec 2018 09:35:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
+      <title><![CDATA[Eclipse Foundation Drives $9 Billion in Open Source Innovation]]></title>
+      <link><![CDATA[https://globenewswire.com/news-release/2018/12/18/1668576/0/en/Eclipse-Foundation-Drives-9-Billion-in-Open-Source-Innovation.html]]></link>
+      <description><![CDATA[Global open source foundation finishes 2018 with 360+ open source projects, 162+ million lines of code written and more than 275 sponsor members]]></description>
+      <pubDate>Wed, 19 Dec 2018 09:35:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>    
+    <item>
+      <title><![CDATA[Read the newest Jakarta EE Newsletter!]]></title>
+      <link><![CDATA[https://www.eclipse.org/community/eclipse_newsletter/2018/november/]]></link>
+      <description><![CDATA[This month we bring you a fully loaded Jakarta EE newsletter with a mix of technical content, community news, and a tutorial!]]></description>
+      <pubDate>Fri, 30 Nov 2018 09:15:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
+      <title><![CDATA[Eclipse Foundation Specification Process, Part III: Creation]]></title>
+      <link><![CDATA[https://blogs.eclipse.org/post/wayne-beaton/eclipse-foundation-specification-process-part-iii-creation]]></link>
+      <description><![CDATA[Creation' is an integral part of the Eclipse Foundation Specification Process. Read Wayne Beaton's newest blog on the topic.]]></description>
+      <pubDate>Fri, 30 Nov 2018 09:15:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
+      <title><![CDATA[How is the Eclipse Foundation Specification Process (EFSP) different from Java Community Process (JCP)?]]></title>
+      <link><![CDATA[https://blogs.eclipse.org/post/tanja-obradovic/how-eclipse-foundation-specification-process-efsp-different-java-community]]></link>
+      <description><![CDATA[There are many differences between Eclipse Foundation Specification Process (EFSP) and Java Community Process (JCP), let's focus on my top 5!]]></description>
+      <pubDate>Tue, 27 Nov 2018 12:15:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
+      <title><![CDATA[Eclipse Foundation Specification Process, Part II: the EFSP]]></title>
+      <link><![CDATA[https://blogs.eclipse.org/post/wayne-beaton/eclipse-foundation-specification-process-part-ii-efsp]]></link>
+      <description><![CDATA[The Eclipse Foundation Specification Process defines a general framework for developing specifications in open source at the Eclipse Foundation.]]></description>
+      <pubDate>Tue, 27 Nov 2018 12:15:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
+      <title><![CDATA[Eclipse Foundation Specification Process, Part I: The EDP]]></title>
+      <link><![CDATA[https://blogs.eclipse.org/post/wayne-beaton/eclipse-foundation-specification-process-part-i-edp]]></link>
+      <description><![CDATA[A quick Eclipse Development Process (EDP) primer.]]></description>
+      <pubDate>Thu, 08 Nov 2018 11:15:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
+      <title><![CDATA[Eclipse Foundation Hosted Services Privacy and Acceptable Usage Policy]]></title>
+      <link><![CDATA[https://blogs.eclipse.org/post/christopher-guindon/eclipse-foundation-hosted-services-privacy-and-acceptable-usage-policy]]></link>
+      <description><![CDATA[The Eclipse Foundation recently made available a new policy to make sure that our projects and hosted services are compliant with the General Data Protection Regulation (GDPR).]]></description>
+      <pubDate>Thu, 08 Nov 2018 11:15:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
+      <title><![CDATA[Eclipse Foundation Updating Contributor and Committer Agreements]]></title>
+      <link><![CDATA[https://blogs.eclipse.org/post/mike-milinkovich/new-eclipse-foundation-committer-and-contributor-agreements]]></link>
+      <description><![CDATA[See Mike Milinkovich's blog explaining the upcoming changes to these agreements and what steps are being taken to implement the update]]></description>
+      <pubDate>Mon, 05 Nov 2018 14:15:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
+      <title><![CDATA[Eclipse Foundation Publishes MicroProfile eBook]]></title>
+      <link><![CDATA[http://globenewswire.ca/news-release/2018/11/05/1644913/0/en/Eclipse-Foundation-Publishes-MicroProfile-eBook.html]]></link>
+      <description><![CDATA[15 page executive guide sets context for enterprises evaluating MicroProfile & enterprise Java microservices for digital transformation]]></description>
+      <pubDate>Mon, 05 Nov 2018 11:00:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
+      <title><![CDATA[Participate in the 2018 Eclipse Foundation Brand Survey]]></title>
+      <link><![CDATA[https://blogs.eclipse.org/post/thabang-mashologu/participate-2018-eclipse-foundation-brand-survey]]></link>
+      <description><![CDATA[We are excited to launch the 2018 edition of our brand survey!]]></description>
+      <pubDate>Mon, 05 Nov 2018 10:45:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+     <item>
+      <title><![CDATA[Case Study: How Bosch Is Succeeding with Open Source at Eclipse IoT]]></title>
+      <link><![CDATA[https://mmilinkov.wordpress.com/2018/10/02/how-bosch-is-succeeding-with-open-source/]]></link>
+      <description><![CDATA[How is it that a 150-year-old, 400,000 employee industrial conglomerate is competing and winning in the rapidly involving IoT software industry?]]></description>
+      <pubDate>Tue, 02 Oct 2018 09:00:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
       <title><![CDATA[Eclipse CBI - Common Build Infrastructure changes]]></title>
       <link><![CDATA[https://blogs.eclipse.org/post/denis-roy/eclipse-cbi-common-build-infrastructure-changes]]></link>
       <description><![CDATA[The Eclipse CBI, which traces its roots back to 2006, has undergone some important changes recently, including a new Kubernetes+Docker-powered environment at https://jenkins.eclipse.org that re announced previously.]]></description>
-      <pubDate>Thu, 28 Sep 2018 15:00:00 EST</pubDate>
+      <pubDate>Fri, 28 Sep 2018 15:00:00 EST</pubDate>
       <category>news</category>
       <pressrelease>0</pressrelease>
     </item>

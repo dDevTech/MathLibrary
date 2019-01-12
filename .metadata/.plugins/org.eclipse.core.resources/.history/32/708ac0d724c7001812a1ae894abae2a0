@@ -1,9 +1,0 @@
-package utils.equations;
-
-import java.util.ArrayList;
-
-public class EquationData{
-	public EquationData() {
-		
-	}
-}

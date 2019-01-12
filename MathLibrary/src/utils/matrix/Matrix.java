@@ -7,6 +7,9 @@
 
 package utils.matrix;
 
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Matrix {
@@ -15,7 +18,8 @@ public class Matrix {
 	private double[][] values;
 	private static int DEFAULT_DECIMALS = 2;
 	private double determinant = 0;
-	private static boolean DEBUG=false;
+	private static boolean DEBUG = false;
+
 	public Matrix(int rows, int columns) {
 		this.rows = rows;
 		this.columns = columns;
@@ -44,14 +48,14 @@ public class Matrix {
 		columns = values[0].length;
 
 	}
+
 	public Matrix(double[] values) {
 		rows = values.length;
 		columns = 1;
-		this.values= new double[rows][columns];
-		for(int i=0;i<values.length;i++) {
-			this.values[i][0]=values[i];
+		this.values = new double[rows][columns];
+		for (int i = 0; i < values.length; i++) {
+			this.values[i][0] = values[i];
 		}
-		
 
 	}
 
@@ -132,7 +136,7 @@ public class Matrix {
 					double sum = 0;
 					for (int j = 0; j < matrix.getRows(); j++) {
 						double value = getValue(k, j) * matrix.getValue(j, i);
-					
+
 						sum += value;
 					}
 					m.setValue(k, i, sum);
@@ -273,7 +277,7 @@ public class Matrix {
 	}
 
 	public double iterativeDeterminant(Matrix matrix, boolean sign) {
-	
+
 		if (isSquare()) {
 			if (matrix.rows == 1) {
 				return matrix.getValue(0, 0);
@@ -286,30 +290,27 @@ public class Matrix {
 				boolean newSign = sign;
 
 				for (int j = 0; j < matrix.getColumns(); j++) {
-					double determinant= matrix.iterativeDeterminant(matrix.getSubMatrix(j, 0), true);
+					double determinant = matrix.iterativeDeterminant(matrix.getSubMatrix(j, 0), true);
 					if (newSign) {
-						if(Matrix.DEBUG) {
-						System.out.println("v+/columns: "+matrix.getColumns()+"/value: " +matrix.getValue(j,0)
-								*matrix.determinant);
+						if (Matrix.DEBUG) {
+							System.out.println("v+/columns: " + matrix.getColumns() + "/value: "
+									+ matrix.getValue(j, 0) * matrix.determinant);
 						}
-						matrix.determinant += matrix.getValue(j, 0)
-								* determinant;
+						matrix.determinant += matrix.getValue(j, 0) * determinant;
 					} else {
-						if(Matrix.DEBUG) {
-						System.out.println("v-/columns: "+matrix.getColumns()+"/value: " + - matrix.getValue(j,0)
-								*matrix.determinant);
+						if (Matrix.DEBUG) {
+							System.out.println("v-/columns: " + matrix.getColumns() + "/value: "
+									+ -matrix.getValue(j, 0) * matrix.determinant);
 						}
-						matrix.determinant +=- matrix.getValue(j,0)
-								*determinant;
+						matrix.determinant += -matrix.getValue(j, 0) * determinant;
 					}
 					newSign = !newSign;
-				
 
 				}
 			}
-			if(Matrix.DEBUG) {
-			matrix.printMatrix();
-			System.out.println("Determinant: "+determinant+" Matrix size: "+matrix.getColumns());
+			if (Matrix.DEBUG) {
+				matrix.printMatrix();
+				System.out.println("Determinant: " + determinant + " Matrix size: " + matrix.getColumns());
 			}
 		} else {
 			try {
@@ -320,7 +321,7 @@ public class Matrix {
 		}
 		return matrix.determinant;
 	}
-	
+
 	public Matrix getCofactors() {
 		Matrix minorMatrix = new Matrix(getRows(), getColumns());
 		boolean sign = true;
@@ -334,7 +335,7 @@ public class Matrix {
 					} else {
 						minorMatrix.setValue(i, j, -getSubMatrix(i, j).iterativeDeterminant(getSubMatrix(i, j), true));
 					}
-				
+
 					sign = !sign;
 				}
 				if (rows % 2 == 0) {
@@ -355,6 +356,90 @@ public class Matrix {
 		return iterativeDeterminant(this, true);
 	}
 
+	// Pending to revise
+	public int getRankMatrix() {
+		int maxRank = columns >= rows ? rows : columns;
+		int minRank = 1;
+		int maxMatrixSize=1;
+		int rank =0;
+		if(maxRank==columns) {
+			maxMatrixSize = rows;
+		}else {
+			maxMatrixSize = columns;
+		}
+		for(int i=1;i<maxMatrixSize;i++) {
+			for(int j=0;j<columns-maxMatrixSize+1;j++) {
+				List<double[]>columns = new ArrayList<>();
+				columns.add(getColumn(0));
+				for(int k=0;k<i;k++) {
+					double[]column=getColumn(j+k);
+					columns.add(column);
+				}
+			
+			}
+		}
+		return 3;
+	}
+	//Pending to revise
+	public static Matrix join(List<double[]>subMatrixs) {
+		//Check
+		
+		for(int i=1;i<subMatrixs.size();i++) {
+			if(subMatrixs.get(i).length!=subMatrixs.get(i-1).length) {
+				try {
+					throw new MatrixException("Submatrixs must have the same rows", "");
+				} catch (MatrixException e) {
+
+					e.printStackTrace();
+				}
+				return null;
+			}
+		}
+		double values[][]= new double[subMatrixs.size()][subMatrixs.get(0).length];
+		for(int i=0;i<subMatrixs.size();i++) {
+			values[i]=subMatrixs.get(i);
+		}
+		return new Matrix(values).transpose();
+	}
+	// Pending to revise
+	public Matrix swapRows(int row1, int row2) {
+		Matrix m = new Matrix(rows, columns);
+		double[] copy1 = values[row1];
+		double[] copy2 = values[row2];
+		for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < columns; j++) {
+				if (i == row1) {
+					m.values[i] = copy2;
+				} else if (i == row2) {
+					m.values[i] = copy1;
+				} else {
+					m.setValue(i, j, values[i][j]);
+				}
+
+			}
+		}
+		return m;
+	}
+
+	// Pending to revise
+	public Matrix swapColumns(int column1, int column2) {
+		Matrix m = new Matrix(rows, columns);
+		double[] copy1 = getColumn(column1);
+		double[] copy2 = getColumn(column2);
+		for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < columns; j++) {
+				if (j == column1) {
+					m.setValue(i, j, copy2[i]);
+				} else if (j == column2) {
+					m.setValue(i, j, copy1[i]);
+				} else {
+					m.setValue(i, j, values[i][j]);
+				}
+			}
+		}
+		return m;
+	}
+
 	public Matrix transpose() {
 		Matrix m = new Matrix(getColumns(), getRows());
 
@@ -364,6 +449,21 @@ public class Matrix {
 			}
 		}
 		return m;
+	}
+
+	// Pending to revise
+	public double[] getColumn(int column) {
+		double[] columnInPosition = new double[rows];
+		int counter = 0;
+		for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < columns; j++) {
+				if (j == column) {
+					columnInPosition[counter] = values[i][j];
+					counter++;
+				}
+			}
+		}
+		return columnInPosition;
 	}
 
 	public boolean isSquare() {
@@ -500,7 +600,7 @@ public class Matrix {
 	public void printMatrix() {
 		System.out.println("-----------------");
 		System.out.println("Printing matrix: #" + getReference(this) + "#");
-
+		DecimalFormat decimalFormat = new DecimalFormat("#,##0.00");
 		for (int i = 0; i < rows; i++) {
 
 			System.out.print("|");
@@ -508,8 +608,8 @@ public class Matrix {
 			for (int j = 0; j < columns; j++) {
 				double pow = Math.pow(10, DEFAULT_DECIMALS);
 				double value = ((int) (values[i][j] * pow)) / (double) pow;
-				String add=(value>=0)?"+":"";
-				System.out.print(add+value + " ");
+				String add = (value >= 0) ? "+" : "";
+				System.out.print(add + decimalFormat.format(value) + " ");
 			}
 			System.out.println("|");
 		}

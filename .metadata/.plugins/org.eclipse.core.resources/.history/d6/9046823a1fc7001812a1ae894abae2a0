@@ -1,7 +1,0 @@
-package utils.equations;
-
-import java.util.ArrayList;
-
-public class EquationData extends ArrayList<double>{
-
-}

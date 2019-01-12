@@ -1,7 +1,0 @@
-package arrayUtils;
-
-public class ArrayUtils {
-	public ArrayUtils() {
-		
-	}
-}
